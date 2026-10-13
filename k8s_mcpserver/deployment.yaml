@@ -19,6 +19,9 @@ spec:
       containers:
         - name: mcpserver
           image: vijaytechz/k8s-mcp-server:latest
+          env:
+          - name: LOGGING
+            value: DEBUG
           imagePullPolicy: Always
           ports:
             - name: http
